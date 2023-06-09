@@ -10,6 +10,8 @@ import Review from './Review'
 import Description from './Description'
 import { TailSpin } from 'react-loader-spinner'
 
+
+
 const Detail = () => {
     const { id } = useParams();
 
@@ -44,19 +46,16 @@ const Detail = () => {
             {loading ? <div className=' w-full flex justify-center items-center h-96'><TailSpin height={40} /> </div>:
                 <section class="text-white body-font ">
                     {/* overflow hidden didnt allow image to be sticky */}
-                    <div class="container px-5 py-24 mx-auto">
-                        <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                            <div class="lg:w-1/3 w-full lg:h-96 md:sticky md:top-28 h-64 m-6 mt-10 object-contain border-green-500 border-2 p-2 ">
+                    <div class="container px-5 py-24 ">
+                        <div class="lg:w-full  flex flex-wrap lg:ml-20">
+                            <div class="lg:w-1/3 w-full lg:h-96 lg:sticky md:top-28 h-64 m-6 mt-10 object-contain border-green-500 border-2 p-2 hover:shadow-blue-500 shadow-2xl ">
                                 <img alt="anime_image" className='h-full w-full' src={data.image} />
                             </div>
 
                             <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-
                                 <ReactStars
                                     size={30} value={data.rating} half={true} edit={false}
                                 />
-
-
                                 <h1 class="text-white  text-3xl title-font font-medium mb-4">{data.title}</h1>
                                 <div class="flex mb-4">
 

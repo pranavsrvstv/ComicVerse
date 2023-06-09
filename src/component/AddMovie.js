@@ -4,11 +4,13 @@ import { TailSpin } from 'react-loader-spinner';
 import { addDoc } from 'firebase/firestore';
 import { animeRef } from '../firebase/Firebase';
 import swal from 'sweetalert';
-
-
+import { Appstate } from "../App";
+import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const AddMovie = () => {
-
+    const useAppstate = useContext(Appstate);
+    const navigate=useNavigate();
     const [form,setForm]=useState({
         title:"",
         year:"",
@@ -20,22 +22,33 @@ const AddMovie = () => {
     
     const addAnime =async()=>{
         setLoading(true);
-        await addDoc(animeRef,form);
-
-        //swal used to show an alert if anime data is added in database
+    try {
+      if(useAppstate.login) {
+        await addDoc(animeRef, form);
         swal({
-            title:"Successfully Added",
-            icon:"success",
-            buttons:"false",
-            timer:"3000"
-        });
+          title: "Successfully Added",
+          icon: "success",
+          buttons: false,
+          timer: 3000
+        })
         setForm({
-            title:"",
-            year:"",
-            description:"",
-            image:""
-            });
-        setLoading(false);
+          title: "",
+          year: "",
+          description: "",
+          image: ""
+        })
+      } else {
+        navigate('/login')
+      }
+    } catch(err) {
+      swal({
+        title: err,
+        icon: "error",
+        buttons: false,
+        timer: 3000
+      })
+    }
+    setLoading(false);
     }
 
     return (
