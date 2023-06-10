@@ -6,12 +6,12 @@ import { collection, addDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAadtxzH6tTrqgGVj6MBk-ktqn1-zA__14",
-  authDomain: "pranav-cloudfunctions.firebaseapp.com",
-  projectId: "pranav-cloudfunctions",
-  storageBucket: "pranav-cloudfunctions.appspot.com",
-  messagingSenderId: "1037615127993",
-  appId: "1:1037615127993:web:d00fa76b507cd79d26ea68"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

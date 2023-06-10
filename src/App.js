@@ -13,6 +13,7 @@ import Login from "./component/Login";
 const Appstate = createContext();
 
 function App() {
+  console.log(process.env.REACT_APP_API_KEY);
   
   const [login, setLogin] = useState(false);
   const [userName, setUserName] = useState("");
