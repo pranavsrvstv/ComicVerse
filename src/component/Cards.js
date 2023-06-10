@@ -12,9 +12,11 @@ const Cards = () => {
     ]);
     const[loading,setLoading]=useState(true);
     
+
     useEffect(()=>{
         async function getData(){
             setLoading(true);
+            //getting data of all the animes
             const _data= await getDocs(animeRef);
             //console.log(_data);
             _data.forEach((doc)=>{

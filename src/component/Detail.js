@@ -30,6 +30,7 @@ const Detail = () => {
     useEffect(() => {
         async function getData() {
             setLoading(true);
+            //getting details of the currently opened anime
             const _doc = doc(db, "anime", id);
             const anime_data = await getDoc(_doc);
             //console.log(_data);

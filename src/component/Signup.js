@@ -17,7 +17,7 @@ const auth = getAuth(app);
 
 const Signup = () => {
     const navigate = useNavigate();
-
+    //form stires the info filled in signup form fields -name ,mobile and password
     const [form, setForm] = useState([{
         name: "",
         mobile: "",
@@ -25,11 +25,14 @@ const Signup = () => {
     }
 
     ]);
+
     const [loading, setLoading] = useState(false);
+    //otpSent state changes when otp is sent successfully
     const [otpSent, setOtpSent] = useState(false);
+    //OTP stores OTP entered by user
     const [OTP, setOTP] = useState("");
 
-
+    //function to generate Recaptha -invisible
     const generateRecaptha = () => {
         window.recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {
             'size': 'invisible',
@@ -39,14 +42,18 @@ const Signup = () => {
         }, auth);
     }
 
+
+    //function that is called when user clicks on request OTP button
     const requestOtp = () => {
-        console.log(form.name,form.password,form.mobile);
+        //console.log(form.name,form.password,form.mobile);
+
         setLoading(true);
         generateRecaptha();
         let appVerifier = window.recaptchaVerifier;
           signInWithPhoneNumber(auth, `+91${form.mobile}`, appVerifier)
           .then(confirmationResult => {
             window.confirmationResult = confirmationResult;
+            //showing an alert when OTP is sent successfully by sweetalert
             swal({
               text: "OTP Sent",
               icon: "success",
@@ -60,11 +67,12 @@ const Signup = () => {
           })
     }
 
-
+    //function that verifies the otp when user click on verify OTP button
     const verifyOTP = () => {
         try {
           setLoading(true);
           window.confirmationResult.confirm(OTP).then((result) => {
+            //calling uploadData that uploads data of the signup form in firebase users Collection
             uploadData();
             swal({
               text: "Sucessfully Registered",
@@ -72,6 +80,7 @@ const Signup = () => {
               buttons: false,
               timer: 3000,
             });
+            //navigate to login page if user is successfully signed up 
             navigate('/login')
             setLoading(false); 
           })
@@ -79,12 +88,15 @@ const Signup = () => {
           console.log(error);
         }
       }
-
+      //function that upload data in users collection 
       const uploadData = async () => {
         try {
+          //function that stores the password entered by the user in a form of hash so that only the user knows his password
           const salt = bcrypt.genSaltSync(10);
           var hash = bcrypt.hashSync(form.password, salt);
-          console.log(form.name,hash,form.mobile);
+          //console.log(form.name,hash,form.mobile);
+
+          //adding userdata in users Collection using a reference to it (exported from Firebase.js)
           await addDoc(usersRef, {
             name: form.name,
             password: hash,

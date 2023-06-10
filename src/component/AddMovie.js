@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 const AddMovie = () => {
     const useAppstate = useContext(Appstate);
     const navigate=useNavigate();
+    //form stores data filled in addmovie form
     const [form,setForm]=useState({
         title:"",
         year:"",
@@ -22,9 +23,11 @@ const AddMovie = () => {
     
     const [loading,setLoading] = useState(false);
     
+    //function for adding an anime in anime collection
     const addAnime =async()=>{
         setLoading(true);
     try {
+        //if user is logged in then only he can add anime otherwise show the login screen
       if(useAppstate.login) {
         await addDoc(animeRef, form);
         swal({

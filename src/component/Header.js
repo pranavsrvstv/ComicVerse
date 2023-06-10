@@ -20,6 +20,7 @@ const Header = () => {
 
       </Link>
       {
+      //if user is logged in show add new button else show log in button
       useAppstate.login?
       <div className='text-sm text-white '>
         <span >Signed In As {useAppstate.userName}</span>
@@ -33,8 +34,6 @@ const Header = () => {
             <span>Log In</span>
           }</button>
       </Link>
-
-
 
     </div>
 

@@ -22,9 +22,6 @@ const Review = ({ id, prevRating, userRated }) => {
   
     */
 
-
-
-
     const useAppstate = useContext(Appstate);
     const [curRating, setRating] = useState(0);
     const [loading, setLoading] = useState(false);
@@ -33,10 +30,13 @@ const Review = ({ id, prevRating, userRated }) => {
     const [update, setUpdate] = useState(true);
    const login=false;
     const [reviewsLoading, setReviewsLoading] = useState(false);
+
+    //function that add the review given by current user to the review list
     const sendReview = async () => {
 
         try {
             setLoading(true);
+            //adding review data in reviews collection
             await addDoc(reviewsRef, {
                 Timestamp: new Date().getTime(),
                 animeId: id,
@@ -44,7 +44,8 @@ const Review = ({ id, prevRating, userRated }) => {
                 rating: curRating,
                 thought: review,
             })
-
+             
+            //updating the totalReviews and rating in the anime collections so that the average rating given by all users can be shown
             const docRef = doc(db, "anime", id);
             await updateDoc(docRef, {
                 totalReviews: userRated + 1,
@@ -54,6 +55,7 @@ const Review = ({ id, prevRating, userRated }) => {
             setRating(0);
             setReview("");
             setUpdate(!update);
+            //a sweet alert
             swal({
                 title: "Successfully Added",
                 icon: "success",
@@ -80,15 +82,23 @@ const Review = ({ id, prevRating, userRated }) => {
         async function getData() {
             setReviewsLoading(true);
             setReviewData([]);
+
+            //getting the reviews of only the currently opened anime using the animeId and query 
             let myquery = query(reviewsRef, where("animeId", '==', id))
+            //getting data of this anime
             const querySnapshot = await getDocs(myquery);
             querySnapshot.forEach((doc) => {
+
+                //filling the reviews in reviewdata array to display on review section
+
+                //...prev(spread operator) keeps all the prev data and add new review in the data
                 setReviewData((prev) => [...prev, doc.data()]);
             });
             setReviewsLoading(false);
 
         }
         getData();
+        //useeffect changes when a update is made to reviews (checked using update variable)
     }, [update]);
 
 
