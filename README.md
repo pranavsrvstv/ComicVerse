@@ -1,70 +1,27 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3><a href="https://anime-verse-kappa.vercel.app/">Deployment</a></h3>
 
-## Available Scripts
 
-In the project directory, you can run:
+<h3>ScreenShots</h3>
+<br>
+<img width="300" height="300" alt="animeverse_home" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/0bfa0eac-6044-4460-b828-7d621e8cb9d8">
+<img width="300" height="300" alt="anime_log_in" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/4959e0de-adf1-4e00-b841-31fd91471971">
+<img width="300" height="300"alt="anime_signup" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/4506853c-0fa1-4d19-a1cc-7ca9073497a3">
+<img width="300" height="300" alt="anime_review" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/ad439985-ee89-41b8-8315-6d2dfb4586ef">
+<img width="300"  height="300" alt="anime_des" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/ccb824a4-ba85-4b53-a152-6a1822208736">
+<img width="300" height="300" alt="anime_add" src="https://github.com/pranavsrvstv/AnimeVerse/assets/120587771/06e3fcbb-e31b-43ed-a72c-639b6d9c87ed">
 
-### `npm start`
+<br>
+<h3>Tech Stack Used </h3>
+1.HTML <br>
+2.CSS -Tailwind<br>
+3.ReactJS<br>
+4.Firebase for backend<br><br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Functionalities</h3>
+1.Login <br>
+2.SigUp <br>
+3.OTP Verification<br>
+4.Add Review section .Registered users can add a review to their anime<br>
+5.Star Rating System<br>
+<br>
