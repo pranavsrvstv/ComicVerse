@@ -11,8 +11,6 @@ import { usersRef } from "../firebase/Firebase";
 import { useNavigate } from "react-router-dom";
 import bcrypt from 'bcryptjs';
 
-
-
 const auth = getAuth(app);
 
 const Signup = () => {

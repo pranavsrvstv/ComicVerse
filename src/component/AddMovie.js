@@ -64,7 +64,7 @@ const AddMovie = () => {
             <section class="text-white body-font">
                 <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-col text-center w-full mb-12">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-green-500">ADD ANIME</h1>
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-green-500">ADD COMIC</h1>
                         <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
                     </div>
                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
