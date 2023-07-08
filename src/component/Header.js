@@ -15,7 +15,7 @@ const Header = () => {
 
       <Link to={'/'}>
         <div className='hover:shadow-green-500 hover:shadow-2xl'>
-          <span >Anime<span className='text-white '>Verse</span></span>
+          <span >Comic<span className='text-white '>Verse</span></span>
         </div>
 
       </Link>
