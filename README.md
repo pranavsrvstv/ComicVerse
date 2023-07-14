@@ -5,7 +5,8 @@
 <h3>ScreenShots</h3>
 <br>
 
-<img width="959" alt="animeweb" src="https://github.com/pranavsrvstv/ComicVerse/assets/120587771/ca3c7584-7857-4132-aacd-81652d8652aa">
+<img width="800" height="500" alt="animeweb" src="https://github.com/pranavsrvstv/ComicVerse/assets/120587771/eea848e6-47ae-4161-b585-b11d60b290ca">
+
 
 <br>
 <h3>Tech Stack Used </h3>
