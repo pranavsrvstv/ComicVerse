@@ -17,8 +17,8 @@
 
 <h3>Functionalities</h3>
 1.Login <br>
-2.SigUp <br>
+2.SignUp <br>
 3.OTP Verification<br>
-4.Add Review section .Registered users can add a review to their anime<br>
+4.Add Review section .Registered users can add a review to their favourite.<br>
 5.Star Rating System<br>
 <br>
